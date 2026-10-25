@@ -59,8 +59,15 @@ body {
   line-height: 1.6;
 }
 
-a {
+a,
+a:visited {
   color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 header {
