@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La nyctinastie – Biologie</title>
+  <meta name="description" content="Pourquoi certaines feuilles se replient la nuit : définition, mécanisme, horloge interne, hypothèses et fossiles.">
+  <link rel="stylesheet" href="../style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <nav class="back"><a href="../">← Tous les articles</a></nav>
+
+  <article>
+    <header class="article-header">
+      <span class="tag">Botanique</span>
+      <h1>La nyctinastie : pourquoi certaines feuilles se replient la nuit</h1>
+      <p class="lead">Le soir, les feuilles de nombreuses plantes se ferment ou s'abaissent, puis se rouvrent au matin. Ce « sommeil des plantes » repose sur une articulation hydraulique et une horloge interne. Son utilité, elle, reste une énigme.</p>
+    </header>
+
+    <figure class="figure" id="journee">
+      <svg id="hero" viewBox="0 0 600 320" role="img" aria-labelledby="hero-title hero-desc">
+        <title id="hero-title">Une plante nyctinastique au fil d'une journée</title>
+        <desc id="hero-desc">Une plante en pot à feuilles composées. Le jour, les folioles sont étalées. Le soir, elles se replient le long de la nervure et les feuilles s'abaissent ; elles se rouvrent à l'aube.</desc>
+        <rect id="sky" width="600" height="320" fill="#a6d8f2"/>
+        <circle id="sun" cx="300" cy="52" r="20" fill="#ffd257"/>
+        <rect y="272" width="600" height="48" fill="#6b8e4e"/>
+        <rect x="260" y="236" width="80" height="12" rx="3" fill="#a5562f"/>
+        <path d="M265,248 H335 L327,288 H273 Z" fill="#b5653b"/>
+        <path d="M300,240 C297,205 303,160 300,98" fill="none" stroke="#3d7a3a" stroke-width="5" stroke-linecap="round"/>
+        <g id="leaves"></g>
+        <circle cx="300" cy="96" r="5" fill="#4f9a4a"/>
+        <rect id="shade" width="600" height="320" fill="#0b1026" opacity="0"/>
+        <g id="stars" opacity="0" fill="#fff">
+          <circle cx="60" cy="40" r="1.6"/><circle cx="140" cy="90" r="1.2"/><circle cx="210" cy="30" r="1.4"/>
+          <circle cx="380" cy="60" r="1.2"/><circle cx="460" cy="25" r="1.6"/><circle cx="540" cy="80" r="1.3"/>
+          <circle cx="100" cy="150" r="1"/><circle cx="500" cy="160" r="1"/><circle cx="560" cy="35" r="1"/>
+        </g>
+        <circle id="moon" cx="300" cy="400" r="14" fill="#f3f0dc" opacity="0"/>
+      </svg>
+      <div class="controls">
+        <button type="button" id="play" aria-pressed="true">Pause</button>
+        <label for="hour">Heure</label>
+        <input type="range" id="hour" min="0" max="24" step="0.05" value="12">
+        <output id="clock" for="hour">12 h 00</output>
+      </div>
+      <p class="status" id="status">Jour : les folioles sont étalées pour capter la lumière.</p>
+      <figcaption>Faites défiler les heures avec le curseur. Le soir, les folioles se rapprochent et se plaquent les unes contre les autres, puis la feuille entière s'abaisse.</figcaption>
+    </figure>
+
+    <nav class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#definition">Définition</a></li>
+        <li><a href="#observer">Où l'observer</a></li>
+        <li><a href="#mecanisme">Le mécanisme</a></li>
+        <li><a href="#horloge">Une horloge interne</a></li>
+        <li><a href="#pourquoi">Pourquoi se replier ?</a></li>
+        <li><a href="#fossiles">Ce que disent les fossiles</a></li>
+        <li><a href="#recherche">La recherche actuelle</a></li>
+        <li><a href="#seismonastie">Ne pas confondre avec la séismonastie</a></li>
+        <li><a href="#experience">Une expérience à faire soi-même</a></li>
+      </ol>
+    </nav>
+
+    <section id="definition">
+      <h2>Définition</h2>
+      <p>La <strong>nyctinastie</strong> est le mouvement quotidien et réversible par lequel certaines plantes ouvrent leurs feuilles le jour et les replient, ou les abaissent, la nuit. On parle aussi, de façon imagée, de « sommeil des plantes ».</p>
+      <div class="callout">
+        <p><strong>Étymologie :</strong> du grec <em>nyx</em>, la nuit, et <em>nastos</em>, serré, pressé.</p>
+        <p><strong>Nastie ou tropisme ?</strong> Dans un tropisme, la plante s'oriente selon la direction du stimulus, par exemple vers la lumière. Dans une nastie, la direction du mouvement ne dépend pas de celle du stimulus. La feuille ne se tourne pas vers la lumière : elle répond à l'alternance du jour et de la nuit.</p>
+      </div>
+    </section>
+
+    <section id="observer">
+      <h2>Où l'observer</h2>
+      <p>Le phénomène est surtout connu chez les légumineuses, mais on le retrouve dans des familles très éloignées.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Groupe</th><th>Exemples</th><th>Ce qu'on observe</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Légumineuses (Fabacées)</td><td>Tamarinier, arbre à pluie (<em>Samanea saman</em>), marie-honte (<em>Mimosa pudica</em>), haricot, trèfle, arachide</td><td>Les folioles se rapprochent et se plaquent les unes contre les autres le soir</td></tr>
+            <tr><td>Oxalis (Oxalidacées)</td><td><em>Oxalis triangularis</em> et autres « faux trèfles »</td><td>Les trois folioles se rabattent vers le bas</td></tr>
+            <tr><td>Marantas (Marantacées)</td><td>« Plantes qui prient »</td><td>Les feuilles se redressent presque à la verticale</td></tr>
+            <tr><td>Plantes aquatiques</td><td><em>Ludwigia sedoides</em> (décrite en 2023)</td><td>Mouvement circadien des feuilles flottantes</td></tr>
+            <tr><td>Laboratoire</td><td><em>Medicago truncatula</em> (petite luzerne modèle)</td><td>Les folioles passent de l'horizontale à la verticale</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="mecanisme">
+      <h2>Le mécanisme</h2>
+
+      <h3>L'organe moteur : le pulvinus</h3>
+      <p>À la base de la feuille, ou de chaque foliole, se trouve un renflement appelé <strong>pulvinus</strong>. C'est une articulation hydraulique, sans aucun muscle.</p>
+      <ul>
+        <li>Il comporte deux tissus opposés : le <strong>fléchisseur</strong>, sur la face supérieure (adaxiale), et l'<strong>extenseur</strong>, sur la face inférieure (abaxiale).</li>
+        <li>Les cellules motrices de chaque face se gonflent ou se vident d'eau. Quand une face se gorge d'eau, elle s'allonge et pousse : la feuille pivote.</li>
+        <li>Au repos, le pulvinus doit aussi porter le poids de la feuille comme une poutre. Il associe des tissus gonflables à un cœur vasculaire, rigide dans le sens de la longueur mais souple en flexion.</li>
+      </ul>
+
+      <figure class="figure pv" id="pulvinus" data-state="day">
+        <svg viewBox="0 0 600 320" role="img" aria-labelledby="pv-title pv-desc">
+          <title id="pv-title">Coupe schématique d'un pulvinus</title>
+          <desc id="pv-desc">Le pulvinus relie la tige à la feuille. Sa face supérieure (fléchisseur) et sa face inférieure (extenseur) contiennent des cellules motrices. Le jour, les cellules de l'extenseur sont gonflées et la feuille est relevée. La nuit, elles se vident et la feuille s'abaisse.</desc>
+          <rect class="pv-stem" x="40" y="0" width="30" height="320"/>
+          <g class="pv-leaf">
+            <path class="pv-petiole" d="M230,130 H335"/>
+            <path class="pv-blade" d="M330,130 C380,92 470,98 525,130 C470,162 380,168 330,130 Z"/>
+            <path class="pv-vein" d="M335,130 H515"/>
+          </g>
+          <rect class="pv-body" x="68" y="95" width="164" height="70" rx="35"/>
+          <rect class="pv-core" x="78" y="126" width="148" height="8" rx="4"/>
+          <g class="cells">
+            <circle class="cell up" cx="92" cy="111" r="11"/><circle class="cell up" cx="114" cy="111" r="11"/><circle class="cell up" cx="136" cy="111" r="11"/><circle class="cell up" cx="158" cy="111" r="11"/><circle class="cell up" cx="180" cy="111" r="11"/><circle class="cell up" cx="202" cy="111" r="11"/>
+            <circle class="cell low" cx="92" cy="149" r="11"/><circle class="cell low" cx="114" cy="149" r="11"/><circle class="cell low" cx="136" cy="149" r="11"/><circle class="cell low" cx="158" cy="149" r="11"/><circle class="cell low" cx="180" cy="149" r="11"/><circle class="cell low" cx="202" cy="149" r="11"/>
+          </g>
+          <text class="lbl" x="80" y="80">Fléchisseur (face supérieure)</text>
+          <text class="lbl" x="80" y="190">Extenseur (face inférieure)</text>
+          <text class="lbl small only-day" x="80" y="210">K⁺, Cl⁻ et eau entrent : cellules gonflées</text>
+          <text class="lbl small only-night" x="80" y="210">K⁺, Cl⁻ et eau sortent : cellules vidées</text>
+          <text class="lbl small muted" x="80" y="236">Au centre : le cœur vasculaire</text>
+        </svg>
+        <div class="controls">
+          <button type="button" data-set="day" aria-pressed="true">☀ Jour</button>
+          <button type="button" data-set="night" aria-pressed="false">☾ Nuit</button>
+        </div>
+        <p class="status" id="pv-status">Jour : les cellules de l'extenseur sont gorgées d'eau. Elles poussent la feuille vers le haut.</p>
+        <figcaption>Exemple de la marie-honte : la nuit, la face inférieure du pulvinus perd sa turgescence et la feuille s'abaisse. Schéma simplifié.</figcaption>
+      </figure>
+
+      <h3>La chaîne de commande</h3>
+      <p>Du signal au mouvement, cinq étapes s'enchaînent :</p>
+      <ol class="chain">
+        <li><span class="n">1</span><strong>Signaux</strong>La lumière, perçue notamment par le phytochrome, et l'horloge interne.</li>
+        <li><span class="n">2</span><strong>Messagers chimiques</strong>Un équilibre entre une substance d'ouverture et une substance de fermeture, que l'horloge fait varier.</li>
+        <li><span class="n">3</span><strong>Ions</strong>Des pompes et des canaux font entrer ou sortir K⁺, Cl⁻ et d'autres ions des cellules motrices.</li>
+        <li><span class="n">4</span><strong>Eau</strong>L'eau suit les ions par osmose.</li>
+        <li><span class="n">5</span><strong>Mouvement</strong>Les cellules gonflent ou se vident : la feuille bouge.</li>
+      </ol>
+
+      <h3>Des molécules propres à chaque espèce</h3>
+      <p>L'équipe japonaise de <strong>Minoru Ueda</strong> (Université Keio, puis Tohoku) a isolé plusieurs paires de substances d'ouverture et de fermeture chez différentes plantes nyctinastiques.</p>
+      <ul>
+        <li>Ces molécules sont très <strong>spécifiques</strong> : celles d'une espèce n'agissent pas sur une autre. On pensait auparavant qu'une hormone commune régulait toutes les plantes nyctinastiques.</li>
+        <li>L'un des deux facteurs est souvent un <strong>glycoside</strong>. Sa concentration varie fortement au cours de la journée, parce qu'il est inactivé par hydrolyse.</li>
+        <li>Exemple : la cis-p-coumaroylagmatine, substance d'ouverture isolée chez <em>Albizia julibrissin</em>.</li>
+      </ul>
+    </section>
+
+    <section id="horloge">
+      <h2>Une horloge interne</h2>
+      <p>En <strong>1729</strong>, l'astronome <strong>Jean-Jacques d'Ortous de Mairan</strong> place une sensitive dans l'obscurité. Ses feuilles continuent de s'ouvrir et de se fermer au rythme des jours. C'est l'une des premières démonstrations d'une horloge biologique.</p>
+
+      <figure class="figure chart" id="mairan">
+        <svg viewBox="-20 0 660 230" role="img" aria-labelledby="mairan-title mairan-desc">
+          <title id="mairan-title">Ouverture des feuilles en lumière puis en obscurité continue</title>
+          <desc id="mairan-desc">Courbe schématique. Pendant deux jours d'alternance jour-nuit, les feuilles s'ouvrent chaque midi. Placées ensuite dans l'obscurité, elles continuent d'osciller, mais le pic se décale chaque jour et l'amplitude diminue.</desc>
+          <rect class="band-night" x="50" y="30" width="190" height="160"/>
+          <rect class="band-day" x="73.75" y="30" width="47.5" height="160"/>
+          <rect class="band-day" x="168.75" y="30" width="47.5" height="160"/>
+          <rect class="band-dark" x="240" y="30" width="380" height="160"/>
+          <g class="noon">
+            <line x1="97.5" y1="30" x2="97.5" y2="190"/><line x1="192.5" y1="30" x2="192.5" y2="190"/><line x1="287.5" y1="30" x2="287.5" y2="190"/>
+            <line x1="382.5" y1="30" x2="382.5" y2="190"/><line x1="477.5" y1="30" x2="477.5" y2="190"/><line x1="572.5" y1="30" x2="572.5" y2="190"/>
+          </g>
+          <path class="curve" pathLength="1" d="M50,190 52.4,189.1 54.8,186.3 57.1,181.8 59.5,175.7 61.9,168 64.2,159.1 66.6,149 69,138.2 71.4,126.7 73.8,115 76.1,103.3 78.5,91.8 80.9,81 83.2,70.9 85.6,62 88,54.3 90.4,48.2 92.8,43.7 95.1,40.9 97.5,40 99.9,40.9 102.2,43.7 104.6,48.2 107,54.3 109.4,62 111.8,70.9 114.1,81 116.5,91.8 118.9,103.3 121.2,115 123.6,126.7 126,138.2 128.4,149 130.8,159.1 133.1,168 135.5,175.7 137.9,181.8 140.2,186.3 142.6,189.1 145,190 147.4,189.1 149.8,186.3 152.1,181.8 154.5,175.7 156.9,168 159.2,159.1 161.6,149 164,138.2 166.4,126.7 168.8,115 171.1,103.3 173.5,91.8 175.9,81 178.2,70.9 180.6,62 183,54.3 185.4,48.2 187.8,43.7 190.1,40.9 192.5,40 194.9,40.9 197.2,43.7 199.6,48.2 202,54.3 204.4,62 206.8,70.9 209.1,81 211.5,91.8 213.9,103.3 216.2,115 218.6,126.7 221,138.2 223.4,149 225.8,159.1 228.1,168 230.5,175.7 232.9,181.8 235.2,186.3 237.6,189.1 240,190 242.4,188.7 244.7,185.7 247.1,181.3 249.5,175.5 251.9,168.4 254.2,160.3 256.6,151.3 259,141.7 261.4,131.5 263.8,121.2 266.1,110.9 268.5,100.8 270.9,91.2 273.2,82.2 275.6,74 278,66.9 280.4,60.9 282.8,56.2 285.1,52.8 287.5,50.8 289.9,50.3 292.2,51.2 294.6,53.4 297,57 299.4,61.8 301.8,67.6 304.1,74.5 306.5,82.1 308.9,90.3 311.2,99 313.6,107.9 316,116.8 318.4,125.5 320.8,133.9 323.1,141.8 325.5,149 327.9,155.3 330.2,160.7 332.6,165 335,168.1 337.4,170.1 339.8,170.8 342.1,170.3 344.5,168.6 346.9,165.7 349.2,161.8 351.6,156.9 354,151.2 356.4,144.7 358.8,137.7 361.1,130.3 363.5,122.7 365.9,115 368.2,107.4 370.6,100.1 373,93.2 375.4,86.9 377.8,81.3 380.1,76.5 382.5,72.6 384.9,69.7 387.2,67.8 389.6,66.9 392,67.2 394.4,68.4 396.8,70.7 399.1,73.9 401.5,78 403.9,82.8 406.2,88.2 408.6,94.2 411,100.5 413.4,107 415.8,113.7 418.1,120.2 420.5,126.6 422.9,132.6 425.2,138.2 427.6,143.2 430,147.5 432.4,151 434.8,153.7 437.1,155.5 439.5,156.4 441.9,156.3 444.3,155.4 446.6,153.6 449,151 451.4,147.7 453.8,143.7 456.1,139.1 458.5,134 460.9,128.6 463.2,123 465.6,117.3 468,111.6 470.4,106.1 472.8,100.8 475.1,95.9 477.5,91.5 479.9,87.7 482.2,84.5 484.6,82.1 487,80.4 489.4,79.4 491.8,79.3 494.1,79.9 496.5,81.3 498.9,83.4 501.2,86.2 503.6,89.6 506,93.4 508.4,97.7 510.7,102.3 513.1,107.1 515.5,112 517.9,117 520.2,121.8 522.6,126.4 525,130.6 527.4,134.5 529.8,137.9 532.1,140.8 534.5,143 536.9,144.6 539.2,145.6 541.6,145.8 544,145.4 546.4,144.3 548.8,142.6 551.1,140.3 553.5,137.6 555.9,134.3 558.2,130.7 560.6,126.8 563,122.6 565.4,118.4 567.8,114.2 570.1,110 572.5,106 574.9,102.2 577.2,98.8 579.6,95.8 582,93.2 584.4,91.2 586.8,89.7 589.1,88.8 591.5,88.4 593.9,88.7 596.2,89.5 598.6,90.8 601,92.7 603.4,95 605.8,97.8 608.1,100.8 610.5,104.2 612.9,107.7 615.2,111.3 617.6,115 620,118.6"/>
+          <line class="axis" x1="50" y1="190" x2="620" y2="190"/>
+          <line class="axis" x1="50" y1="30" x2="50" y2="190"/>
+          <text class="lbl small" x="44" y="44" text-anchor="end">ouvertes</text>
+          <text class="lbl small" x="44" y="190" text-anchor="end">fermées</text>
+          <text class="lbl small" x="145" y="22" text-anchor="middle">Jour / nuit</text>
+          <text class="lbl small" x="430" y="22" text-anchor="middle">Obscurité continue</text>
+          <g class="lbl small" text-anchor="middle">
+            <text x="97.5" y="208">Jour 1</text><text x="192.5" y="208">Jour 2</text><text x="287.5" y="208">Jour 3</text>
+            <text x="382.5" y="208">Jour 4</text><text x="477.5" y="208">Jour 5</text><text x="572.5" y="208">Jour 6</text>
+          </g>
+        </svg>
+        <p class="legend"><span class="key key-day"></span>lumière <span class="key key-night"></span>nuit <span class="key key-noon"></span>midi</p>
+        <figcaption>Schéma de l'expérience de Mairan (courbe illustrative). Dans le noir, le rythme continue, mais le pic d'ouverture s'éloigne peu à peu de midi et s'atténue.</figcaption>
+      </figure>
+
+      <ul>
+        <li>Le rythme est <strong>endogène</strong> : il persiste plusieurs jours sans lumière.</li>
+        <li>L'horloge ne bat pas exactement sur 24 heures. Dans le noir prolongé, le rythme se décale et s'atténue peu à peu. Chaque jour, la lumière sert à la remettre à l'heure.</li>
+        <li>Chez certaines plantes, comme <em>Oxalis triangularis</em>, la température joue aussi un rôle, surtout pour le mouvement des fleurs.</li>
+      </ul>
+    </section>
+
+    <section id="pourquoi">
+      <h2>Pourquoi se replier ? Les hypothèses</h2>
+      <p>La fonction de la nyctinastie <strong>n'est pas établie</strong>. Plusieurs explications coexistent, et elles ne s'excluent pas.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Garder la chaleur</h3>
+          <p>Proposée par Darwin (<em>The Power of Movement in Plants</em>, 1880). Moins de surface exposée au ciel, donc moins de chaleur perdue par rayonnement pendant la nuit.</p>
+        </div>
+        <div class="card">
+          <h3>Rester au sec</h3>
+          <p>Les feuilles repliées retiennent moins de rosée et de pluie, d'où moins d'infections par les champignons et les bactéries.</p>
+        </div>
+        <div class="card">
+          <h3>Ne pas être trompée par la lune</h3>
+          <p>La lumière lunaire pourrait fausser la mesure de la durée du jour (photopériode), qui règle la floraison.</p>
+        </div>
+        <div class="card">
+          <h3>Exposer les herbivores</h3>
+          <p>Hypothèse plus récente (2019) : sur une feuille repliée, les insectes nocturnes seraient plus visibles pour leurs prédateurs, comme les chauves-souris ou les chouettes.</p>
+        </div>
+      </div>
+      <p>L'avantage n'est sans doute pas le même d'une espèce à l'autre.</p>
+    </section>
+
+    <section id="fossiles">
+      <h2>Ce que disent les fossiles</h2>
+      <p>En <strong>2023</strong>, une étude publiée dans <em>Current Biology</em> (Feng et al.) a apporté la première preuve convaincante de nyctinastie chez des plantes fossiles.</p>
+
+      <figure class="figure fossil">
+        <svg viewBox="0 0 600 320" role="img" aria-labelledby="fossil-title fossil-desc">
+          <title id="fossil-title">Comment une feuille pliée garde des morsures symétriques</title>
+          <desc id="fossil-desc">Une feuille se plie le long de sa nervure centrale. Un insecte y fait un seul trou, qui traverse les deux moitiés. Une fois la feuille dépliée, on voit deux trous placés symétriquement de part et d'autre de la nervure.</desc>
+          <path class="f-petiole" d="M300,288 V318"/>
+          <g class="f-half f-left">
+            <path class="f-blade" d="M300,290 C190,262 168,112 300,30 Z"/>
+            <path class="f-vein" d="M300,245 L226,218 M300,195 L206,165 M300,145 L212,112 M300,98 L238,72"/>
+            <circle class="f-hole" cx="245" cy="182" r="13"/>
+          </g>
+          <g class="f-half f-right">
+            <path class="f-blade" d="M300,290 C410,262 432,112 300,30 Z"/>
+            <path class="f-vein" d="M300,245 L374,218 M300,195 L394,165 M300,145 L388,112 M300,98 L362,72"/>
+            <circle class="f-hole" cx="355" cy="182" r="13"/>
+          </g>
+          <path class="f-midrib" d="M300,290 V30"/>
+          <g class="f-sym">
+            <path d="M258,182 H342"/>
+            <text class="lbl small f-sym-label" x="300" y="216" text-anchor="middle">symétriques</text>
+          </g>
+          <g class="f-insect">
+            <path d="M262,170 l-6,-10 M276,170 l0,-11 M262,192 l-6,10 M276,192 l0,11"/>
+            <ellipse cx="270" cy="181" rx="17" ry="9"/>
+            <circle cx="250" cy="181" r="6.5"/>
+          </g>
+        </svg>
+        <p class="stages" aria-hidden="true">
+          <span class="s1">1. La nuit, la feuille se plie le long de sa nervure.</span>
+          <span class="s2">2. Un insecte la grignote : un seul trou traverse les deux moitiés.</span>
+          <span class="s3">3. Le jour, la feuille s'ouvre : deux trous symétriques.</span>
+        </p>
+        <figcaption>Si un insecte mange une feuille pliée, la morsure laisse une paire de trous en miroir. C'est ce motif que l'on retrouve sur les fossiles.</figcaption>
+      </figure>
+
+      <ul>
+        <li>Sur des feuilles de <strong>gigantoptéridées</strong> vieilles de <strong>plus de 250 millions d'années</strong>, les morsures d'insectes forment des <strong>paires symétriques</strong> de part et d'autre de la nervure centrale.</li>
+        <li>Ce motif s'explique si l'insecte a mangé une feuille <strong>pliée</strong> : un seul trou traverse les deux moitiés.</li>
+        <li>Les auteurs concluent que la nyctinastie est apparue <strong>plusieurs fois, indépendamment</strong>, au cours de l'évolution. Cela suggère qu'elle apporte un avantage réel.</li>
+      </ul>
+    </section>
+
+    <section id="recherche">
+      <h2>La recherche actuelle</h2>
+      <ul>
+        <li><strong>Génétique.</strong> Chez <em>Medicago truncatula</em>, la perte du gène <em>PETIOLULE-LIKE PULVINUS</em> (<em>PLP</em>) transforme les pulvini en simples pétioles : les feuilles ne se replient plus. La comparaison de leur biomasse avec celle de plantes normales suggère que le mouvement influence la croissance (<em>New Phytologist</em>, 2012). Des mutants comparables existent chez <em>Lotus japonicus</em>.</li>
+        <li><strong>Arachide.</strong> Une étude de 2025 (<em>Plant Physiology and Biochemistry</em>) décrit l'anatomie et les mécanismes moléculaires de la nyctinastie chez <em>Arachis hypogaea</em>.</li>
+        <li><strong>Protéines du pulvinus.</strong> Des analyses du protéome du pulvinus de soja cherchent les protéines responsables des changements de turgescence.</li>
+        <li><strong>Biomécanique.</strong> Des modèles physiques du pulvinus de la marie-honte étudient comment il peut être à la fois rigide et flexible. L'imagerie en temps réel montre le rôle des vaisseaux du xylème, d'un épiderme extensible et de micro-plis de surface.</li>
+        <li><strong>Applications.</strong> Optimiser la capture de la lumière par les cultures, améliorer leur résistance aux stress, inspirer des actionneurs pour la robotique souple.</li>
+      </ul>
+    </section>
+
+    <section id="seismonastie">
+      <h2>Ne pas confondre avec la séismonastie</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Critère</th><th>Nyctinastie</th><th>Séismonastie</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Déclencheur</td><td>Alternance du jour et de la nuit</td><td>Contact, secousse</td></tr>
+            <tr><td>Vitesse</td><td>Lente et progressive</td><td>Très rapide (quelques secondes)</td></tr>
+            <tr><td>Commande</td><td>Horloge interne, lumière, messagers chimiques</td><td>Signaux électriques et hydrauliques</td></tr>
+            <tr><td>Rôle supposé</td><td>Encore discuté</td><td>Défense contre les animaux</td></tr>
+            <tr><td>Exemple</td><td>Tamarinier, oxalis, marie-honte le soir</td><td>Marie-honte que l'on touche</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Point commun : les deux mouvements utilisent le même organe moteur, le <strong>pulvinus</strong>. La marie-honte présente les deux.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Une expérience simple à faire soi-même</h2>
+      <ol class="steps">
+        <li>Choisir une plante en pot : marie-honte, oxalis ou jeune tamarinier.</li>
+        <li>Photographier la même feuille toutes les 30 minutes, de la fin d'après-midi à la nuit, puis au lever du jour.</li>
+        <li>Mesurer l'angle des folioles sur chaque photo et tracer la courbe.</li>
+        <li>Placer ensuite le pot 48 heures dans un placard sombre. Si le rythme continue, c'est la preuve d'une horloge interne : c'est l'expérience de Mairan.</li>
+      </ol>
+      <div class="callout warn">
+        <p><strong>Précaution :</strong> ne pas toucher une marie-honte pendant les mesures, sinon elle se replie par séismonastie.</p>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>Darwin, C. (1880). <em>The Power of Movement in Plants</em>.</li>
+        <li>Ueda, M. et al. (2003). Chemical studies on plant leaf movement controlled by a biological clock. <em>Pure and Applied Chemistry</em>, 75, 353–358. <a href="https://publications.iupac.org/pac/75/2/0353/index.html">Lien</a></li>
+        <li>Ueda, M., Takada, N., Yamamura, S. (2002). Bioorganic Chemistry of Nyctinastic Leaf-movement using synthetic probe compounds. <em>Current Organic Chemistry</em>, 6(6). <a href="https://eurekaselect.com/article/9745">Lien</a></li>
+        <li>Ueda, M. et al. (1998). Leaf-opening substance in the nyctinastic plant, <em>Albizzia julibrissin</em>. <a href="https://agris.fao.org/search/en/records/647236e3e17b74d2224ecaa0">Lien</a></li>
+        <li>Identification and characterization of petiolule-like pulvinus mutants with abolished nyctinastic leaf movement in the model legume <em>Medicago truncatula</em> (2012). <em>New Phytologist</em>, 196(1), 92–100. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3504090">Lien</a></li>
+        <li>The anatomical basis and molecular mechanism of <em>Arachis hypogaea</em> nyctinastic movement (2025). <em>Plant Physiology and Biochemistry</em>. <a href="https://ouci.dntb.gov.ua/works/7PMdLoGO">Lien</a></li>
+        <li>Feng et al. (2023). Specialized herbivory in fossil leaves reveals convergent origins of nyctinasty. <em>Current Biology</em>. <a href="https://www.newswise.com/articles/insect-bite-marks-show-first-fossil-evidence-for-plants-leaves-folding-up-at-night">Lien</a></li>
+        <li>Heyder, K., Neinhuis, C., Lautenschläger, T. (2023). Morphology, anatomy and sleep movements of <em>Ludwigia sedoides</em>. <em>The Science of Nature</em>, 110, 18. <a href="https://tud.qucosa.de/id/qucosa%3A95328">Lien</a></li>
+        <li>Nyctinastic movement of <em>Oxalis triangularis</em> (2023). <a href="https://maxapress.com/article/doi/10.48130/TIH-2023-0011">Lien</a></li>
+        <li>Pulvinus biomechanics. <em>Integrative and Comparative Biology</em> (2023). <a href="https://academic.oup.com/icb/article/63/6/1331/7147573">Lien</a></li>
+        <li>Mechanisms of leaf movement in plants (Nature Index). <a href="https://www.nature.com/nature-index/topics/l4/mechanisms-of-leaf-movement-in-plants">Lien</a></li>
+        <li>Nyctinasty (Wikipedia). <a href="https://en.wikipedia.org/wiki/Nyctinasty">Lien</a></li>
+      </ul>
+    </section>
+  </article>
+
+  <footer>
+    <p><a href="../">← Retour à l'accueil</a></p>
+  </footer>
+
+  <script src="nyctinastie.js"></script>
+</body>
+</html>
